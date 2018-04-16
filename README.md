@@ -44,12 +44,14 @@ In Main class you need to have these:
           
           
          private synch_New_Data(){
-              
+              //cleanSettimeout if exist
                if (this.synch_tiemout != null) {
                    clearTimeout(this.synch_tiemout);
                  } 
                        let now = new Date();
                       //last_synch is var which is savaed to user data when was last synchronisation.                                              
+                      //We recalculate time to synchonisation and we set again.
+                      //Also is necessary to check if number is under 0.
                        let time_to_synch = ( now.getTime() - new Date(lastsynch).getTime() )
 
             this.synch_tiemout = settimeout(() => {
