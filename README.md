@@ -25,54 +25,37 @@ In Main class you need to have these:
       private onResumeSubscription: Subscription;   //Subscription 
       
       //for testing purpose
-      private synch_tiemout= null;   
-     
-     
+      private synch_tiemout= null;     
     
     // In constructor we set subscribion when app is resumed.
-    constructor(public navCtrl: NavController, private platform: Platform) {
+       constructor(public navCtrl: NavController, private platform: Platform) {
      
       this.onResumeSubscription = platform.resume.subscribe(() => {
-      
-      
-      // Here we set the function which will be called to recaluclated Interval
-      
-      
-     // Ex:
-      this.synch_New_Data();
-      
-        });
- 
-        }
+            // Here we set the function which will be called to recaluclated Interval
+            // Ex:
+            this.synch_New_Data();
+       });
+      }
         
-        //When app is closed
-       ngOnDestroy(): void {
-          this.onResumeSubscription.unsubscribe();
-          }
+         //When app is closed
+         ngOnDestroy(): void {
+              this.onResumeSubscription.unsubscribe();
+            }
           
           
-          
-          private synch_New_Data(){
+         private synch_New_Data(){
               
-         if (this.synch_tiemout != null) {
-      
-         clearTimeout(this.synch_tiemout);
-        } 
-            let now = new Date();
-                                                           //Time last synch was saved
-            let time_to_synch = ( now.getTime() - new Date(lastsynch).getTime() )
-              
-      
-        this.synch_tiemout = settimeout(() => {
-            
-            }, time_to_synch ) 
-        
-          
-          
-          }
+               if (this.synch_tiemout != null) {
+                   clearTimeout(this.synch_tiemout);
+                 } 
+                       let now = new Date();
+                      //last_synch is var which is savaed to user data when was last synchronisation.                                              
+                       let time_to_synch = ( now.getTime() - new Date(lastsynch).getTime() )
 
+            this.synch_tiemout = settimeout(() => {
+            
+                  }, time_to_synch ) ;
+
+          }
     }
-    
-    
-    
-    
+   
