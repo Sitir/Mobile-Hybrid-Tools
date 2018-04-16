@@ -3,9 +3,9 @@ Mobile hybrid developments for Ionic, cordova, phonegap
 
 ## Overview
 
-- [Ionic SetTimeout/SetInterval when app is in backhground.](#Ionic-setTimeout/SetInterval-when-app-is-in-backhground.
+- [Ionic SetTimeout/SetInterval when app is in backhground.](####Ionic-setTimeout-SetInterval-background).
 
-#### Ionic SetTimeout/SetInterval when app is in backhground.
+#### Ionic setTimeout-SetInterval background.
 
 In this case when app went in background mode the app is stopped as interaval or timeout. We use webview which doesn't give as opportunity to make timer. Ofcourse I could wrote pluign in Java or Swift but why not use javascript in this case it will be TypeScript because we use Ionic (but it won't matter). 
 
