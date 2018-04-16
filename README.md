@@ -29,7 +29,7 @@ In Main class you need to have these:
      
      
     
-    // In constructor we set subscribion we app is resumed.
+    // In constructor we set subscribion when app is resumed.
     constructor(public navCtrl: NavController, private platform: Platform) {
      
       this.onResumeSubscription = platform.resume.subscribe(() => {
