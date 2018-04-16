@@ -3,7 +3,9 @@ Mobile hybrid developments for Ionic, cordova, phonegap
 
 ## Overview
 
-- [Ionic SetTimeout/SetInterval when app is in backhground.](####Ionic-setTimeout-SetInterval-background).
+- [Ionic SetTimeout/SetInterval when app is in background.](####Ionic-setTimeout-SetInterval-background)
+
+
 
 #### Ionic setTimeout-SetInterval background.
 
